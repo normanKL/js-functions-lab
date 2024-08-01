@@ -9,16 +9,16 @@ Exercise 1 has been completed for you:
 */
 
 const maxOfTwoNumbers = (x, y) => {
-    if (x >= y) {
-      return x;
-    } else {
-      return y;
-    }
+  if (x >= y) {
+    return x;
+  } else {
+    return y;
   }
-  
-  console.log('Exercise 1 Result:', maxOfTwoNumbers(3, 9));
+}
 
-  /*
+console.log('Exercise 1 Result:', maxOfTwoNumbers(3, 9));
+
+/*
 Exercise 2: isAdult()
 
 Write a function named isAdult. It should take an age (number) 
@@ -29,12 +29,12 @@ Example: isAdult(21) should return 'Adult'.
 Complete the exercise in the space below:
 */
 
-function isAdult (age) {
- if (age >= 18) {
+function isAdult(age) {
+  if (age >= 18) {
     return 'Adult'
- } else {
+  } else {
     return 'Minor'
- }
+  }
 }
 
 console.log('Exercise 2 Result:', isAdult(21));
@@ -52,12 +52,18 @@ Example: isCharAVowel('a') should return true.
 Complete the exercise in the space below:
 */
 
-function isCharAVowel (char) {
- if ("aeiouAEIOU".includes(char)) {
-    return 'True'
- } else {
-    return 'False'
- }
+/* 
+Nick's Feedback: For this one: function isCharAVowel (char) { if ("aeiouAEIOU".includes(char)) { return 'True' } else { return 'False' } } 
+You'll want to return a boolean datatype rather than a string 'True'/'False'. 
+true and false in lowercase are reserved keywords in JS, so you can return these instead.
+*/
+
+function isCharAVowel(char) {
+  if ("aeiouAEIOU".includes(char)) {
+    return true
+  } else {
+    return false
+  }
 }
 
 // ! Because it's Boolean (True/ False), the code below works without ifElse statement!
@@ -78,8 +84,8 @@ should return 'johnsmith@example.com'.
 Complete the exercise in the space below:
 */
 
-function generateEmail (name, domain) {
-    return `${name}@${domain}`
+function generateEmail(name, domain) {
+  return `${name}@${domain}`
 }
 
 console.log('Exercise 4 Result:', generateEmail("johnsmith", "example.com"));
@@ -96,8 +102,8 @@ Example: greetUser('Sam', 'morning') should return "Good morning, Sam!"
 Complete the exercise in the space below:
 */
 
-function greetUser (name, greeting) {
-    return 'Good ' + greeting+ ", " + name + '!'
+function greetUser(name, greeting) {
+  return 'Good ' + greeting + ", " + name + '!'
 }
 
 console.log('Exercise 5 Result:', greetUser("Sam", "morning"));
@@ -113,8 +119,8 @@ Example: maxOfThree(17, 4, 9) should return 17.
 Complete the exercise in the space below:
 */
 
-function maxOfThree (a, b, c) {
-    return Math.max (a, b, c)
+function maxOfThree(a, b, c) {
+  return Math.max(a, b, c)
 }
 
 console.log('Exercise 6 Result:', maxOfThree(5, 10, 8));
@@ -131,8 +137,8 @@ Example: calculateTip(50, 20) should return 10.
 Complete the exercise in the space below:
 */
 
-function calculateTip (bill, tip) {
-    return bill * (tip/100)
+function calculateTip(bill, tip) {
+  return bill * (tip / 100)
 }
 
 console.log('Exercise 7 Result:', calculateTip(50, 20));
@@ -152,12 +158,12 @@ Complete the exercise in the space below:
 */
 
 //You can easily Google the formula to convert celsius to Fahrenheit
-function convertTemperature (temperature, scale){
-    if (scale === "C") {
-        return (temperature * 9/5) + 32 
-    } else if (scale === "F") {
-        return (temperature - 32) *5/9
-    }
+function convertTemperature(temperature, scale) {
+  if (scale === "C") {
+    return (temperature * 9 / 5) + 32
+  } else if (scale === "F") {
+    return (temperature - 32) * 5 / 9
+  }
 }
 
 console.log('Exercise 8 Result:', convertTemperature(32, "C"));
@@ -179,17 +185,17 @@ Complete the exercise in the space below:
 */
 
 function basicCalculator(num1, num2, operation) {
-    if (operation === 'add') {
-      return num1 + num2
-    } else if (operation === 'subtract') {
-      return num1 - num2
-    } else if (operation === 'multiply') {
-      return num1 * num2
-    } else if (operation === 'divide') {
-      return num1 / num2
-    } 
+  if (operation === 'add') {
+    return num1 + num2
+  } else if (operation === 'subtract') {
+    return num1 - num2
+  } else if (operation === 'multiply') {
+    return num1 * num2
+  } else if (operation === 'divide') {
+    return num1 / num2
   }
-  
+}
+
 console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
 
 /*
@@ -208,18 +214,18 @@ Complete the exercise in the space below:
 */
 
 function calculateGrade(score) {
-    if (score >= 90) {
-      return 'A';
-    } else if (score >= 80) {
-      return 'B';
-    } else if (score >= 70) {
-      return 'C';
-    } else if (score >= 60) {
-      return 'D';
-    } else {
-      return 'F';
-    }
+  if (score >= 90) {
+    return 'A';
+  } else if (score >= 80) {
+    return 'B';
+  } else if (score >= 70) {
+    return 'C';
+  } else if (score >= 60) {
+    return 'D';
+  } else {
+    return 'F';
   }
+}
 
 console.log('Exercise 10 Result:', calculateGrade(85));
 
@@ -240,12 +246,12 @@ Complete the exercise in the space below:
 */
 
 function createUsername(firstName, lastName) {
-    const firstPart = firstName.slice(0, 3);
-    const secondPart = lastName.slice(0, 3);
-    const totalLength = firstName.length + lastName.length;
-    
-    return `${firstPart}${secondPart}${totalLength}`;
-  }
+  const firstPart = firstName.slice(0, 3);
+  const secondPart = lastName.slice(0, 3);
+  const totalLength = firstName.length + lastName.length;
+
+  return `${firstPart}${secondPart}${totalLength}`;
+}
 
 console.log('Exercise 11 Result:', createUsername("Samantha", "Green"));
 
@@ -259,7 +265,7 @@ Complete the exercise in the space below:
 */
 
 function numArgs() {
-    return arguments.length;
-  }
+  return arguments.length;
+}
 
 console.log('Exercise 12 Result:', numArgs(1, 2, 3, 4));
